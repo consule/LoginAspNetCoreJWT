@@ -5,7 +5,8 @@ SQL Server
 
 `CREATE DATABASE ControleDeConteudo`
 
-``CREATE TABLE [dbo].[Usuario](
+```
+CREATE TABLE [dbo].[Usuario](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[NomeCompleto] [varchar](150) NOT NULL,
 	[Username] [varchar](50) NOT NULL,
@@ -14,4 +15,21 @@ SQL Server
 (
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]``
+) ON [PRIMARY]
+```
+
+** Populando a tabela Usuario ** 
+```
+USE [ControleDeConteudo]
+GO
+
+INSERT INTO [dbo].[Usuario]
+           ([NomeCompleto]
+           ,[Username]
+           ,[Password])
+     VALUES
+           ('Hebert Vianna' 
+           ,'hebert' 
+           ,'clavedesol')
+GO
+```
