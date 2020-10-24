@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +19,6 @@ namespace ControleDeConteudo.Controllers
             _usuarioRepository = usuarioRepo;
         }
 
-      
         [HttpPost]
         [Route("login")]
         [AllowAnonymous]
@@ -36,17 +32,16 @@ namespace ControleDeConteudo.Controllers
             }
             else
             {
-                var token = TokenService.GenerateToken(usuario);               
+                var token = TokenService.GenerateToken(usuario);              
 
                 return new
                 {
                     id = x.Id,
                     usuario = usuario.Username,                     
                     nomeCompleto = x.NomeCompleto ,
-                    token = token
+                    token
                 };
-            }     
-            
+            }               
         }
     }
 }
