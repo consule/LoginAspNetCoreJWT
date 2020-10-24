@@ -36,12 +36,12 @@ namespace ControleDeConteudo.Controllers
             }
             else
             {
-                var token = TokenService.GenerateToken(usuario);
-                usuario.Password = "";
+                var token = TokenService.GenerateToken(usuario);               
 
                 return new
-                {                  
-                    usuario = usuario.Username,  
+                {
+                    id = x.Id,
+                    usuario = usuario.Username,                     
                     nomeCompleto = x.NomeCompleto ,
                     token = token
                 };

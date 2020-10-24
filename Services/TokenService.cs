@@ -21,9 +21,8 @@ namespace ControleDeConteudo.Services
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, usuario.Username.ToString()),       
-                    //new Claim(ClaimTypes.Role, usuario.NomeCompleto.ToString())
-        }),
+                    new Claim(ClaimTypes.Name, usuario.Username.ToString()), 
+                }),
                 Expires = DateTime.UtcNow.AddHours(2), 
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
