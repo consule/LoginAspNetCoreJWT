@@ -18,7 +18,7 @@ CREATE TABLE [dbo].[Usuario](
 ) ON [PRIMARY]
 ```
 
-** Populando a tabela Usuario ** 
+# Populando a tabela Usuario 
 ```
 USE [ControleDeConteudo]
 GO
@@ -33,3 +33,11 @@ INSERT INTO [dbo].[Usuario]
            ,'clavedesol')
 GO
 ```
+# Retorno do  Login
+
+![Alt text](https://raw.githubusercontent.com/consule/LoginAspNetCoreJWT/master/retornoJson.png?raw=true "Title")
+
+
+
+
+
